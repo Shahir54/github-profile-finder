@@ -1,0 +1,202 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #82aae6;
+    color: #222;
+}
+
+.header {
+    background: #243f77;
+    color: white;
+    text-align: center;
+    padding: 30px 15px;
+}
+
+.header h1 {
+    margin: 0 0 10px;
+}
+
+.header p {
+    margin: 0;
+    color: #d5dbea;
+}
+
+.container {
+    width: 90%;
+    max-width: 1000px;
+    margin: 30px auto;
+}
+
+.search-card,
+.profile-card,
+.history-card {
+    background: white;
+    padding: 24px;
+    margin-bottom: 24px;
+    border-radius: 12px;
+    box-shadow: 0 3px 12px #bb65650d;
+}
+
+h2 {
+    margin-top: 0;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.search-box {
+    display: flex;
+    gap: 10px;
+}
+
+input {
+    flex: 1;
+    min-width: 0;
+    padding: 12px;
+    border: 1px solid #cbd0d9;
+    border-radius: 10px;
+    font-size: 16px;
+}
+
+button {
+    padding: 12px 20px;
+    background: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+button:hover {
+    background: #1d4ed8;
+}
+
+button:disabled {
+    opacity: 0.6;
+    cursor: wait;
+}
+
+#message {
+    margin-bottom: 0;
+    color: #444;
+}
+
+.profile-info {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+}
+
+.avatar {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.profile-info h2 {
+    margin-bottom: 8px;
+}
+
+.bio {
+    color: #555;
+}
+
+.stats {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+    margin-top: 18px;
+}
+
+.stat {
+    background: #f0f4fa;
+    padding: 12px;
+    border-radius: 8px;
+}
+
+.profile-link,
+.repo-link {
+    color: #2563eb;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.profile-link:hover,
+.repo-link:hover {
+    text-decoration: underline;
+}
+
+.repository-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+}
+
+.repo-card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid #e1e5ec;
+    overflow-wrap: anywhere;
+}
+
+.repo-card h3 {
+    margin-top: 0;
+}
+
+.repo-description {
+    color: #555;
+    min-height: 24px;
+}
+
+.repo-stats {
+    color: #555;
+    font-size: 14px;
+}
+
+#historyList {
+    padding-left: 20px;
+}
+
+#historyList li {
+    margin-bottom: 8px;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    color: #666;
+}
+
+[hidden] {
+    display: none !important;
+}
+
+@media (max-width: 600px) {
+    .container {
+        width: 94%;
+    }
+
+    .search-box {
+        flex-direction: column;
+    }
+
+    .profile-info {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .repository-grid {
+        grid-template-columns: 1fr;
+    }
+}
